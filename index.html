@@ -10,8 +10,8 @@
             // 예: 안드로이드 설정창을 강제로 띄우는 페이로드
             // location.href = "intent:#Intent;action=android.settings.SETTINGS;end";
   
-            // WIFI 설정창
-            location.href = "intent:#Intent;action=android.settings.WIFI_SETTINGS;end";
+            // TEL 스킴을 이용한 다이얼러 호출
+            location.href = "intent:#Intent;action=android.intent.action.DIAL;data=tel:01012345678;end";
         };
     </script>
 </body>
