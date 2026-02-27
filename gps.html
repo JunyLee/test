@@ -1,0 +1,6 @@
+<script>
+    navigator.geolocation.getCurrentPosition(function(pos) {
+        alert("탈취된 위치: " + pos.coords.latitude + ", " + pos.coords.longitude);
+        // 위치 정보를 서버로 전송하는 코드 추가 가능
+    });
+</script>
