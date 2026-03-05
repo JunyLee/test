@@ -6,7 +6,12 @@
     
     <script>
     window.onload = function() {
-        location.href = "intent:#Intent;component=com.naver.nozzle/com.naver.nozzle.setting.account.AccountSettingsActivity;package=com.naver.nozzle;end";
+        var payload = "intent:#Intent;action=android.intent.action.MAIN;" +
+                  "category=android.intent.category.DEFAULT;" +
+                  "component=com.naver.nozzle/com.naver.nozzle.setting.account.AccountSettingsActivity;" +
+                  "package=com.naver.nozzle;end";
+    
+        location.href = payload;
     };
 </script>
 </body>
